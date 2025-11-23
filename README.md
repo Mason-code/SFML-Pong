@@ -1,4 +1,5 @@
 # SFML-Pong
 
-Works well
+Works well.
 took like 5hrs
+inspired by Nick in gov

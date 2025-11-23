@@ -37,6 +37,9 @@ GameState states = GameState::NOT_STARTED;
 int main()
 {
     sf::Clock clock;
+    sf::Clock deathTime;
+    float diedTime;
+
     // create the window
     sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Pong", sf::Style::Titlebar | sf::Style::Close);
 
@@ -95,18 +98,20 @@ int main()
         window.clear(sf::Color::Black);
 
 
-
         switch (states) {
         case GameState::NOT_STARTED:
+            if (deathTime.getElapsedTime().asSeconds() < 1.0f) {
+                break;
+            }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
-                HORIZ_BALL_VELOCITY = (400.f);
-                VERT_BALL_VELOCITY = randomVal(-200.f, 200.f);
+                HORIZ_BALL_VELOCITY = (500.f);
+                VERT_BALL_VELOCITY = randomVal(-250.f, 250.f);
                 states = GameState::STARTED;
 
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
-                HORIZ_BALL_VELOCITY = -(400.f);
-                VERT_BALL_VELOCITY = randomVal(-200.f, 200.f);
+                HORIZ_BALL_VELOCITY = -(500.f);
+                VERT_BALL_VELOCITY = randomVal(-250.f, 250.f);
                 states = GameState::STARTED;
 
             }
@@ -123,23 +128,27 @@ int main()
                 leftScore++;
                 leftText.setString(std::to_string(leftScore));
                 reset();
+                diedTime = deathTime.restart().asSeconds();
 
             }
             if (ball.getPosition().x <= -20) {
                 rightScore++;
                 rightText.setString(std::to_string(rightScore));
                 reset();
+                diedTime = deathTime.restart().asSeconds();
 
             }
-
 
             break;
 
         }
 
+       
+
+
         // controls
-        float vertSpeed = 500.0f;
         float dt = clock.restart().asSeconds();
+        float vertSpeed = 500.0f;
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
             leftPaddle.move({ 0.f, -vertSpeed * dt });
         }
@@ -153,7 +162,6 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
             rightPaddle.move({ 0.f, vertSpeed * dt });
         }
-
 
        // yop and bottom border
         if (ball.getPosition().y >= WIN_HEIGHT-10) {
@@ -209,6 +217,7 @@ void reset() {
     leftPaddle.setPosition({ 0 , 800 / 2 - 35 });
 
     states = GameState::NOT_STARTED;
+
     
 
 }

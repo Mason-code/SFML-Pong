@@ -6,20 +6,20 @@ C:\Dev\SFML-Pong\Pong Game\External\include\SFML\System\Exception.hpp(41,47): wa
       C:\Dev\SFML-Pong\Pong Game\External\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Dev\SFML-Pong\Pong Game\main.cpp(64,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Dev\SFML-Pong\Pong Game\main.cpp(65,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Dev\SFML-Pong\Pong Game\main.cpp(69,14): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,50): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,50): warning C4244:         with
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,50): warning C4244:         [
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,50): warning C4244:             _Ty=int
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,50): warning C4244:         ]
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,45): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,45): warning C4244:         with
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,45): warning C4244:         [
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,45): warning C4244:             _Ty=int
-C:\Dev\SFML-Pong\Pong Game\main.cpp(190,45): warning C4244:         ]
-C:\Dev\SFML-Pong\Pong Game\main.cpp(191,19): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(67,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(68,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(72,14): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,50): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,50): warning C4244:         with
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,50): warning C4244:         [
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,50): warning C4244:             _Ty=int
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,50): warning C4244:         ]
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,45): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,45): warning C4244:         with
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,45): warning C4244:         [
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,45): warning C4244:             _Ty=int
+C:\Dev\SFML-Pong\Pong Game\main.cpp(198,45): warning C4244:         ]
+C:\Dev\SFML-Pong\Pong Game\main.cpp(199,19): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   Pong Game.vcxproj -> C:\Dev\SFML-Pong\Pong Game\x64\Debug\Pong Game.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
